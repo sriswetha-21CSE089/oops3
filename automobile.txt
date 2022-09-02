@@ -1,0 +1,120 @@
+package oops1;
+
+import java.util.Scanner;
+
+
+public class Oops1
+{
+    public static void main(String[] args)
+    {
+      car c=new car();
+      truck t=new truck();
+      c.getcar();
+      t.gettruck();
+      c.display();
+      t.display1();
+    }
+    
+}
+class automobile
+{
+    String maker;
+    String vehidno;
+    float bbval;
+    int year;
+    int passengers;
+}
+class car extends automobile
+{
+    boolean warranty;
+    int doors;
+    boolean imported;
+    int topspeed;
+    String size;
+    String reardoor;
+    void getcar()
+    {
+        Scanner o=new Scanner(System.in);
+        System.out.println("enter car details:");
+        System.out.println("maker:");
+        maker=o.next();
+        System.out.println("vehicle no:");
+        vehidno=o.next();
+        System.out.println("bluebookvalue:");
+        bbval=o.nextFloat();
+        System.out.println("year:");
+        year=o.nextInt();
+        System.out.println("passengers:");
+        passengers=o.nextInt();
+        System.out.println("warranty:");
+        warranty=o.nextBoolean();
+        System.out.println("doors:");
+        doors=o.nextInt();
+        System.out.println("imported:");
+        imported=o.nextBoolean();
+        System.out.println("topspeed:");
+        topspeed=o.nextInt();
+        System.out.println("size:");
+        size=o.next();
+        System.out.println("reardoor:");
+        reardoor=o.next();
+        System.out.println("---------------------------");
+        
+    }
+    void display()
+    {
+         
+         System.out.println("car details:");
+         System.out.println("vehicle no:"+vehidno);
+         System.out.println("bluebookvalue:"+bbval);
+         System.out.println("year:"+year);
+         System.out.println("passengers:"+passengers);
+         System.out.println("warranty:"+warranty);
+         System.out.println("doors:"+doors);
+         System.out.println("imported:"+imported);
+         System.out.println("topspeed:"+topspeed);
+         System.out.println("size:"+size);
+         System.out.println("reardoor:"+reardoor);
+         System.out.println("---------------------------");
+    }
+}
+class truck extends automobile
+{
+    boolean topper;
+    String wheels;
+    int racks;
+    void gettruck()
+    {
+        Scanner o=new Scanner(System.in);
+        System.out.println("enter truck details:");
+        System.out.println("maker:");
+        maker=o.next();
+        System.out.println("vehicle no:");
+        vehidno=o.next();
+        System.out.println("bluebookvalue:");
+        bbval=o.nextFloat();
+        System.out.println("year:");
+        year=o.nextInt();
+        System.out.println("passengers:");
+        passengers=o.nextInt();
+        System.out.println("topper:");
+        topper=o.nextBoolean();
+        System.out.println("wheels:");
+        wheels=o.next();
+        System.out.println("racks:");
+        racks=o.nextInt();
+        System.out.println("---------------------------");
+    }
+    void display1()
+    {
+         System.out.println("truck details:");
+         System.out.println("maker:"+maker); 
+         System.out.println("vehicle no:"+vehidno);
+         System.out.println("bluebookvalue:"+bbval);
+         System.out.println("year:"+year);
+         System.out.println("passengers:"+passengers);
+         System.out.println("topper:"+topper);
+         System.out.println("wheels:"+wheels); 
+         System.out.println("racks:"+racks);
+    }
+}

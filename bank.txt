@@ -1,0 +1,43 @@
+package oops;
+public class Oops 
+{
+    public static void main(String[] args)
+    {
+        bankA o1=new bankA();
+        bankB o2=new bankB();
+        bankC o3=new bankC();
+        System.out.println("bankA balance-->"+o1.getbalance());
+        System.out.println("bankB balance-->"+o2.getbalance());
+        System.out.println("bankC balance-->"+o3.getbalance());
+        
+    }
+    
+}
+class bank
+{
+    int getbalance()
+    {
+        return 0;
+    }
+}
+class bankA extends bank
+{
+    int getbalance()
+    {
+        return 1000;
+    }
+}
+class bankB extends bank
+{
+    int getbalance()
+    {
+        return 1500;
+    }
+}
+class bankC extends bank
+{
+    int getbalance()
+    {
+        return 2000;
+    }
+}
